@@ -1,6 +1,10 @@
 def ubah_huruf(sentence):
-    pattern = ""
-    return pattern
+    translation_table = str.maketrans(
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+        "BCDEFGHIJKLMNOPQRSTUVWXYZAbcdefghijklmnopqrstuvwxyza"
+    )
+    modified_sentence = sentence.translate(translation_table)
+    return modified_sentence
 
 if __name__ == '__main__':
     print(ubah_huruf("SEPULSA OKE")) # COZEVCK YUO

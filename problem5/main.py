@@ -1,4 +1,14 @@
 def mean_median(array_input):
+    n = len(array_input)
+    mean = sum(array_input) / n
+
+    sorted_array = sorted(array_input)
+    if n % 2 == 0:
+        median = (sorted_array[n // 2 - 1] + sorted_array[n // 2]) / 2
+    else:
+        median = sorted_array[n // 2]
+
+    return (mean, median)
     mean = 1.0
     median = 1
     return (mean, median)
